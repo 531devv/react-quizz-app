@@ -1,7 +1,7 @@
 .quizz-questions {
     width: 100%;
     height: 350px;
-    background-color: black;
+    background-image: linear-gradient(to right top, #d1d1d1, #d8d8d8, #dfdfdf, #e7e7e7, #eeeeee, #efefef, #efefef, #f0f0f0, #eaeaea, #e4e4e4, #dedede, #d8d8d8);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
