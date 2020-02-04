@@ -1,9 +1,12 @@
 import React from 'react';
+import './css/QuizzAnswers.css';
 
 export default class QuizzAnswers extends React.Component {
     render() {
         return (
-            <p>anserws</p>
+            <div className="quizz-answers">
+                <p>232323</p>
+            </div>
         );
     }
 }
