@@ -5,7 +5,12 @@ export default class QuizzAnswer extends React.Component {
     render() {
         return (
             <div className="quizz-answer">
-                <p>2928481</p>
+                <div className="grid">
+                    <div className="grid-item">10</div>
+                    <div className="grid-item">10</div>
+                    <div className="grid-item">10</div>
+                    <div className="grid-item">10</div>
+                </div>
             </div>
         );
     }
