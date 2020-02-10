@@ -20,6 +20,8 @@
     transition: 1s ease-out;
     overflow: hidden;
     font-size: 0.7em;
+    text-align: center;
+    
 }
 
 .grid-item:hover {
