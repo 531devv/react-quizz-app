@@ -9,7 +9,7 @@ export default class QuizzAnswers extends React.Component {
     render() {
         return (
             <div className="quizz-answers">
-                <QuizzAnswer data={this.props.data}/>
+                <QuizzAnswer data={this.props.data} answer={this.props.answer}/>
             </div>
         );
     }

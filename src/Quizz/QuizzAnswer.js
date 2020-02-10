@@ -6,8 +6,8 @@ export default class QuizzAnswer extends React.Component {
         super(props);
     }
     render() {
-        const answers = this.props.data.answers.map((answer) => 
-            <div className="grid-item">{answer}</div>
+        const answers = this.props.data.answers.map((answer, i) => 
+            <button type="text" className="grid-item" value={i} onClick={this.props.answer}>{answer}</button>
         );
         return (
             <div className="quizz-answer">
