@@ -2,14 +2,17 @@ import React from 'react';
 import './css/QuizzAnswer.css';
 
 export default class QuizzAnswer extends React.Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
+        const answers = this.props.data.answers.map((answer) => 
+            <div className="grid-item">{answer}</div>
+        );
         return (
             <div className="quizz-answer">
                 <div className="grid">
-                    <div className="grid-item">19</div>
-                    <div className="grid-item">10</div>
-                    <div className="grid-item">10</div>
-                    <div className="grid-item">10</div>
+                    {answers}
                 </div>
             </div>
         );

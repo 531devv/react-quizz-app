@@ -15,7 +15,7 @@ export default class QuizzContainer extends React.Component {
         return(
             <div className="quizz-container">
                 <QuizzQuestions data={this.state.randomKey} />
-                <QuizzAnswers />
+                <QuizzAnswers data={this.state.randomKey} />
             </div>
         );
     }
