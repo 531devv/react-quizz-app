@@ -1,0 +1,64 @@
+{
+    "questions": [
+    {
+    "question": "Which of the following is not a JSON type",
+    "answers": [
+    "String",
+    "Date",
+    "Array",
+    "Object"
+    ],
+    "correctIndex": 2
+    },
+    {
+    "question": "What is the file extension of JSON?",
+    "answers": [
+    ".jn",
+    ".js",
+    ".jsn",
+    ".json"
+    ],
+    "correctIndex": 4
+    },
+    {
+    "question": "In the below notation, Employee is of type { “Employee”: { “Name”: “Amy”, “Age”: 25 } }",
+    "answers": [
+    "Object",
+    "Array",
+    "Class",
+    "Not a valid JSON string"
+    ],
+    "correctIndex": 1
+    },
+    {
+    "question": "What does JSON stand for?",
+    "answers": [
+    "JavaScript Object Nomenclature",
+    "JavaScript Objective Notation",
+    "JavaScript Object Notation",
+    "JavaScript Orientated Nomenclature"
+    ],
+    "correctIndex": 3
+    },
+    {
+    "question": "JSON elements are separated by",
+    "answers": [
+    "semi-colon",
+    "line break",
+    "comma",
+    "white space"
+    ],
+    "correctIndex": 3
+    },
+    {
+    "question": "What keywords are reserved in JSON and cannot be used as keys?",
+    "answers": [
+    "Value",
+    "Object",
+    "There are none",
+    "Key"
+    ],
+    "correctIndex": 3
+    }
+    ]
+    }
