@@ -8,7 +8,7 @@
     "Array",
     "Object"
     ],
-    "correctIndex": 2
+    "correctIndex": 1
     },
     {
     "question": "What is the file extension of JSON?",
@@ -18,7 +18,7 @@
     ".jsn",
     ".json"
     ],
-    "correctIndex": 4
+    "correctIndex": 3
     },
     {
     "question": "In the below notation, Employee is of type { “Employee”: { “Name”: “Amy”, “Age”: 25 } }",
@@ -28,7 +28,7 @@
     "Class",
     "Not a valid JSON string"
     ],
-    "correctIndex": 1
+    "correctIndex": 0
     },
     {
     "question": "What does JSON stand for?",
@@ -38,7 +38,7 @@
     "JavaScript Object Notation",
     "JavaScript Orientated Nomenclature"
     ],
-    "correctIndex": 3
+    "correctIndex": 2
     },
     {
     "question": "JSON elements are separated by",
@@ -48,7 +48,7 @@
     "comma",
     "white space"
     ],
-    "correctIndex": 3
+    "correctIndex": 2
     },
     {
     "question": "What keywords are reserved in JSON and cannot be used as keys?",
@@ -58,7 +58,7 @@
     "There are none",
     "Key"
     ],
-    "correctIndex": 3
+    "correctIndex": 2
     }
     ]
     }
