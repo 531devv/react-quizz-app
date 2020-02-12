@@ -9,29 +9,37 @@ export default class QuizzContainer extends React.Component {
         const randomQuestion = Math.floor(Math.random() * this.props.data.questions.length);
         this.state = {
             randomKey: this.props.data.questions[randomQuestion],
-            randomQuestionIndex: randomQuestion,
             points: 0,
-            completeQuestions: []
+            completeQuestions: [randomQuestion]
         }
         this.getAnswer = this.getAnswer.bind(this);
     }
 
     getAnswer(e) {
-        e.preventDefault();
+        const randomQuestion = Math.floor(Math.random() * this.props.data.questions.length);
         const currentCompleteQuestions = this.state.completeQuestions;
-        const randomQuestion = Math.floor(Math.random() * this.props.data.questions.length)
-        currentCompleteQuestions.push(this.state.randomQuestionIndex)
-        if(e.target.value == this.state.randomKey.correctIndex){
-            const currentPoints = this.state.points + 1;
-            this.setState({
-                points: currentPoints
-            })
+        if(currentCompleteQuestions.length === this.props.data.questions.length) {
+            alert(`Koniec gry twoje punkty: ${this.state.points}`);
+        } else {
+            if(!currentCompleteQuestions.includes(randomQuestion)) {
+                currentCompleteQuestions.push(randomQuestion);
+                this.setState({
+                    randomKey: this.props.data.questions[randomQuestion],
+                    completeQuestions: currentCompleteQuestions
+                });
+                console.log(e.target.value);
+                console.log(this.state.randomKey.correctIndex);
+                if(e.target.value == this.state.randomKey.correctIndex){
+                    const currentPoints = this.state.points + 1;
+                    this.setState({
+                        points: currentPoints
+                    })
+                }
+            } else {
+                this.getAnswer(e);
+            }
         }
-        this.setState({
-            randomKey: this.props.data.questions[randomQuestion],
-            completeQuestions: currentCompleteQuestions,
-            randomQuestionIndex: randomQuestion
-        })
+        
     }
 
     render() {
