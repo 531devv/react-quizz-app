@@ -14,6 +14,16 @@ export default class QuizzContainer extends React.Component {
             completeQuestions: [randomQuestion]
         }
         this.getAnswer = this.getAnswer.bind(this);
+        this.restart = this.restart.bind(this);
+    }
+
+    restart() {
+        const randomQuestion = Math.floor(Math.random() * this.props.data.questions.length);
+        this.setState({
+            points: 0,
+            randomKey: this.props.data.questions[randomQuestion],
+            completeQuestions: [randomQuestion]
+        });
     }
 
     getAnswer(e) {
@@ -28,8 +38,6 @@ export default class QuizzContainer extends React.Component {
                     randomKey: this.props.data.questions[randomQuestion],
                     completeQuestions: currentCompleteQuestions
                 });
-                console.log(e.target.value);
-                console.log(this.state.randomKey.correctIndex);
                 if(e.target.value == this.state.randomKey.correctIndex){
                     const currentPoints = this.state.points + 1;
                     this.setState({
@@ -48,7 +56,7 @@ export default class QuizzContainer extends React.Component {
             <div className="quizz-container">
                 <QuizzQuestions data={this.state.randomKey} />
                 <QuizzAnswers data={this.state.randomKey} answer={this.getAnswer}/>
-                <QuizzResetButton />
+                <QuizzResetButton restart={this.restart} />
             </div>
         );
     }

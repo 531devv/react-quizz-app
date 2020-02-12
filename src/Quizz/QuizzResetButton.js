@@ -5,7 +5,7 @@ export default class QuizzResetButton extends Component {
     render() {
         return (
             <div className="quizz-reset-button">
-                <button type="submit">Restart</button>
+                <button type="submit" onClick={this.props.restart}>Restart</button>
             </div>
         )
     }
