@@ -1,0 +1,6 @@
+.quizz-score {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 0.7em;
+}

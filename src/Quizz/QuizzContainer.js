@@ -3,6 +3,7 @@ import QuizzQuestions from './QuizzQuestions';
 import QuizzAnswers from './QuizzAnswers';
 import QuizzResetButton from './QuizzResetButton';
 import './css/QuizzContainer.css';
+import QuizzScore from './QuizzScore';
 
 export default class QuizzContainer extends React.Component {
     constructor(props) {
@@ -30,7 +31,7 @@ export default class QuizzContainer extends React.Component {
         const randomQuestion = Math.floor(Math.random() * this.props.data.questions.length);
         const currentCompleteQuestions = this.state.completeQuestions;
         if(currentCompleteQuestions.length === this.props.data.questions.length) {
-            alert(`Koniec gry twoje punkty: ${this.state.points}`);
+            alert(`It's end, your score: ${this.state.points}`);
         } else {
             if(!currentCompleteQuestions.includes(randomQuestion)) {
                 currentCompleteQuestions.push(randomQuestion);
@@ -56,6 +57,7 @@ export default class QuizzContainer extends React.Component {
             <div className="quizz-container">
                 <QuizzQuestions data={this.state.randomKey} />
                 <QuizzAnswers data={this.state.randomKey} answer={this.getAnswer}/>
+                <QuizzScore points={this.state.points} />
                 <QuizzResetButton restart={this.restart} />
             </div>
         );
