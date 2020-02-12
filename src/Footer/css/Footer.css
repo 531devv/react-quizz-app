@@ -1,13 +1,9 @@
 footer {
-    position: absolute;
+    display: flex;
+    justify-content: center;
     width: 100%;
     color: rgb(39, 39, 39);
     font-size: 0.6em;
-    bottom: 0;
-    margin-bottom: 20px;
-}
-
-footer p {
-    display: flex;
-    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
