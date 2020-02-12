@@ -1,6 +1,7 @@
 import React from 'react';
 import QuizzQuestions from './QuizzQuestions';
 import QuizzAnswers from './QuizzAnswers';
+import QuizzResetButton from './QuizzResetButton';
 import './css/QuizzContainer.css';
 
 export default class QuizzContainer extends React.Component {
@@ -47,6 +48,7 @@ export default class QuizzContainer extends React.Component {
             <div className="quizz-container">
                 <QuizzQuestions data={this.state.randomKey} />
                 <QuizzAnswers data={this.state.randomKey} answer={this.getAnswer}/>
+                <QuizzResetButton />
             </div>
         );
     }
